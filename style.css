@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "VIC-Light";
+  font-style: normal;
+  src: url("./fonts/VIC-Light.eot");
+  src: url("./fonts/VIC-Light-iefix.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/VIC-Light.woff2") format("woff2"),
+       url("./fonts/VIC-Light.woff") format("woff"),
+       url("./fonts/VIC-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VIC-Regular";
+  font-style: normal;
+  src: url("./fonts/VIC-Regular.eot");
+  src: url("./fonts/VIC-Regular-iefix.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/VIC-Regular.woff2") format("woff2"),
+       url("./fonts/VIC-Regular.woff") format("woff"),
+       url("./fonts/VIC-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VIC-SemiBold";
+  font-style: normal;
+  src: url("./fonts/VIC-SemiBold.eot");
+  src: url("./fonts/VIC-SemiBold-iefix.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/VIC-SemiBold.woff2") format("woff2"),
+       url("./fonts/VIC-SemiBold.woff") format("woff"),
+       url("./fonts/VIC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VIC-Bold";
+  font-style: normal;
+  src: url("./fonts/VIC-Bold.eot");
+  src: url("./fonts/VIC-Bold-iefix.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/VIC-Bold.woff2") format("woff2"),
+       url("./fonts/VIC-Bold.woff") format("woff"),
+       url("./fonts/VIC-Bold.ttf") format("truetype");
+}
+
+.current {
+  font-size: 3.5em;
+  font-family: 'Vic-Bold'
+}
+
+.current-small {
+  font-size: 2em;
+  font-family: 'Vic-Bold'
+}
+
+.current {
+  font-size: 3.5em;
+  font-family: 'Vic-Bold'
+}
+
+body {
+  font-family: 'Vic-Regular';
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Vic-SemiBold';
+}
+
+table {
+  font-family: 'Vic-Regular';
+  color: #ffffff;
+  width: 100%
+}
+
+table>thead>tr>th:not(:first-child){
+  text-align: center;
+}
+table>tbody>tr>td{
+  text-align: center;
+}
+
+.gvatable{
+  color: #5C2D91
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    background-color: lightblue;
+  }
+  .tourism-box-1250 {
+    height: 1250px;
+  }
+  .tourism-box-1200 {
+    height: 1200px;
+  }
+  .tourism-box-1100 {
+    height: 1100px;
+  }
+  .tourism-box-1000 {
+    height: 1000px;
+  }
+  .tourism-box-900 {
+    height: 900px;
+  }
+  .tourism-box-850 {
+    height: 850px;
+  }
+  
+}
+

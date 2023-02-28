@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="lib/jquery-3.5.1/jquery.min.js"></script>
+<script src="lib/proj4js-2.3.15/proj4.js"></script>
+<link href="lib/highcharts-10.2.0/css/motion.css" rel="stylesheet" />
+<script src="lib/highcharts-10.2.0/highcharts.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-3d.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-more.js"></script>
+<script src="lib/highcharts-10.2.0/modules/stock.js"></script>
+<script src="lib/highcharts-10.2.0/modules/map.js"></script>
+<script src="lib/highcharts-10.2.0/modules/accessibility.js"></script>
+<script src="lib/highcharts-10.2.0/modules/data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/offline-exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/drilldown.js"></script>
+<script src="lib/highcharts-10.2.0/modules/item-series.js"></script>
+<script src="lib/highcharts-10.2.0/modules/overlapping-datalabels.js"></script>
+<script src="lib/highcharts-10.2.0/modules/annotations.js"></script>
+<script src="lib/highcharts-10.2.0/modules/export-data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/funnel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/heatmap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/treemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sankey.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dependency-wheel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/organization.js"></script>
+<script src="lib/highcharts-10.2.0/modules/solid-gauge.js"></script>
+<script src="lib/highcharts-10.2.0/modules/streamgraph.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sunburst.js"></script>
+<script src="lib/highcharts-10.2.0/modules/vector.js"></script>
+<script src="lib/highcharts-10.2.0/modules/wordcloud.js"></script>
+<script src="lib/highcharts-10.2.0/modules/xrange.js"></script>
+<script src="lib/highcharts-10.2.0/modules/tilemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/venn.js"></script>
+<script src="lib/highcharts-10.2.0/modules/gantt.js"></script>
+<script src="lib/highcharts-10.2.0/modules/timeline.js"></script>
+<script src="lib/highcharts-10.2.0/modules/parallel-coordinates.js"></script>
+<script src="lib/highcharts-10.2.0/modules/bullet.js"></script>
+<script src="lib/highcharts-10.2.0/modules/coloraxis.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dumbbell.js"></script>
+<script src="lib/highcharts-10.2.0/modules/lollipop.js"></script>
+<script src="lib/highcharts-10.2.0/modules/series-label.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost-canvas.js"></script>
+<script src="lib/highcharts-10.2.0/plugins/motion.js"></script>
+<script src="lib/highcharts-10.2.0/custom/reset.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost.js"></script>
+<script src="lib/highchart-binding-0.9.4.9001/highchart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js" crossorigin="anonymous"></script>
+  <title>Creative Businesses Trend</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<html lang="en">
+  <body>
+    <div class="tourism" style="width: 100%;">
+      <div class="grid grid-pad">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 my-3" style="background-color:#0E4E96;border-radius:20px;padding:1em;">
+              <div id="htmlwidget-ce1fb41cc3103bfb7bbc" style="width:100%;height:350px;" class="highchart html-widget"></div>
+              <script type="application/json" data-for="htmlwidget-ce1fb41cc3103bfb7bbc">{"x":{"hc_opts":{"chart":{"reflow":true,"height":350},"title":{"text":"Creative and Cultural Businesses","widthAdjust":0,"style":{"font-size":"1.5rem"}},"yAxis":{"title":{"text":"businesses","enabled":false},"type":"linear","min":40000,"accessibility":{"enabled":true,"description":"number of creative businesses"}},"credits":{"enabled":false},"exporting":{"enabled":true,"allowHTML":true,"accessibility":{"enabled":true,"keyboardNavigation":{"enabled":true}},"buttons":{"contextButton":{"menuItems":["viewFullscreen","viewData","separator","downloadPNG","downloadSVG"]}},"csv":{"dateFormat":"%B %Y"},"tableCaption":false,"chartOptions":{"title":{"style":{"fontFamily":"Arial"}},"subtitle":{"style":{"fontFamily":"Arial"}},"xAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"yAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"caption":{"text":null},"chart":{"style":{"fontFamily":"Arial"}}}},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true,"pointPlacement":"on"},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"Creative and Cultural Businesses","data":[{"year":"2017-18","businesses":41363,"bus_type":"Creative and Cultural Businesses","y":41363,"name":"2017-18"},{"year":"2018-19","businesses":42762,"bus_type":"Creative and Cultural Businesses","y":42762,"name":"2018-19"},{"year":"2019-20","businesses":43360,"bus_type":"Creative and Cultural Businesses","y":43360,"name":"2019-20"},{"year":"2020-21","businesses":45010,"bus_type":"Creative and Cultural Businesses","y":45010,"name":"2020-21"},{"year":"2021-22","businesses":48618,"bus_type":"Creative and Cultural Businesses","y":48618,"name":"2021-22"}],"type":"area","accessibility":{"enabled":true,"description":"this chart shows the number of creative businesses over time"}}],"xAxis":{"type":"category","title":{"text":"year","enabled":false},"tickInterval":1,"tickmarkPlacement":"on","accessibility":{"enabled":true,"description":"financial year"}},"colors":["#72BF44"],"legend":{"enabled":false}},"theme":{"chart":{"backgroundColor":null,"style":{"fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)","color":"white"}},"title":{"align":"left","style":{"color":"white","fontFamily":"VIC-Regular","font-weight":"bold","font-size":"2rem","background-color":"white"}},"subtitle":{"align":"left","style":{"color":"white","fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)"}},"legend":{"itemStyle":{"fontFamily":"VIC-Regular","color":"white"},"itemHoverStyle":{"color":"gray"}},"xAxis":{"labels":{"style":{"color":"white","fontFamily":"VIC-Light","font-size":"11px"}},"title":{"align":"high","style":{"color":"white","font-size":"11px"}},"lineWidth":1,"lineColor":"white","tickPosition":"outside","tickColor":"white","tickWidth":1,"tickLength":4},"yAxis":{"labels":{"useHTML":true,"style":{"color":"white","fontFamily":"VIC-Light","font-size":"11px"},"y":5},"title":{"align":"high","style":{"color":"white","font-size":"11px"}},"minorGridLineWidth":0,"majorGridLineWidth":1,"lineWidth":0,"lineColor":"transparent","opposite":false},"caption":{"style":{"color":"white"}},"series":{"line":{"lineWidth":4},"spline":{"lineWidth":4},"area":{"lineWidth":4,"fillOpacity":0.4,"marker":{"enabled":false,"symbol":"circle","radius":2,"states":{"hover":{"enabled":true}}}}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Arial","VIC-Regular","VIC-Light"],"debug":false},"evals":[],"jsHooks":[]}</script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+</html>

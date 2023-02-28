@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="lib/jquery-3.5.1/jquery.min.js"></script>
+<script src="lib/proj4js-2.3.15/proj4.js"></script>
+<link href="lib/highcharts-10.2.0/css/motion.css" rel="stylesheet" />
+<script src="lib/highcharts-10.2.0/highcharts.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-3d.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-more.js"></script>
+<script src="lib/highcharts-10.2.0/modules/stock.js"></script>
+<script src="lib/highcharts-10.2.0/modules/map.js"></script>
+<script src="lib/highcharts-10.2.0/modules/accessibility.js"></script>
+<script src="lib/highcharts-10.2.0/modules/data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/offline-exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/drilldown.js"></script>
+<script src="lib/highcharts-10.2.0/modules/item-series.js"></script>
+<script src="lib/highcharts-10.2.0/modules/overlapping-datalabels.js"></script>
+<script src="lib/highcharts-10.2.0/modules/annotations.js"></script>
+<script src="lib/highcharts-10.2.0/modules/export-data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/funnel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/heatmap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/treemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sankey.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dependency-wheel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/organization.js"></script>
+<script src="lib/highcharts-10.2.0/modules/solid-gauge.js"></script>
+<script src="lib/highcharts-10.2.0/modules/streamgraph.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sunburst.js"></script>
+<script src="lib/highcharts-10.2.0/modules/vector.js"></script>
+<script src="lib/highcharts-10.2.0/modules/wordcloud.js"></script>
+<script src="lib/highcharts-10.2.0/modules/xrange.js"></script>
+<script src="lib/highcharts-10.2.0/modules/tilemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/venn.js"></script>
+<script src="lib/highcharts-10.2.0/modules/gantt.js"></script>
+<script src="lib/highcharts-10.2.0/modules/timeline.js"></script>
+<script src="lib/highcharts-10.2.0/modules/parallel-coordinates.js"></script>
+<script src="lib/highcharts-10.2.0/modules/bullet.js"></script>
+<script src="lib/highcharts-10.2.0/modules/coloraxis.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dumbbell.js"></script>
+<script src="lib/highcharts-10.2.0/modules/lollipop.js"></script>
+<script src="lib/highcharts-10.2.0/modules/series-label.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost-canvas.js"></script>
+<script src="lib/highcharts-10.2.0/plugins/motion.js"></script>
+<script src="lib/highcharts-10.2.0/custom/reset.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost.js"></script>
+<script src="lib/highchart-binding-0.9.4.9001/highchart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js" crossorigin="anonymous"></script>
+  <title>Creative Economic Contribution Overview</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<html lang="en">
+  <body>
+    <div class="tourism" style="width: 100%;">
+      <div class="grid grid-pad">
+        <figure>
+          <figcaption hidden="hidden">
+            <strong id="gross-value-add-caption">gross-value-add</strong>
+            <br/>
+            <span id="gross-value-add-summary">Creative Industries contribution to the Victorian economy for financial year ending 2021</span>
+          </figcaption>
+          <div id="gross-value-add" aria-labelledby="gross-value-add-caption" aria-describedby="gross-value-add-summary" class="container" style="background: #97D5C9;padding:1em;border-radius: 20px;color:#5C2D91;display: grid;">
+            <div class="row">
+              <div class="col-12">
+                <div style="font-size:25vmin;font-family:VIC-Bold;text-align:center;white-space: nowrap;width:100%;height:28vmin;"><span><span style="font-size:40%;color:#C82254;">$</span>34.1<span style="font-size:40%;color:#C82254;">B</span><div style="font-size:20%;color:#C82254;text-align:right;position:relative;top:-125%;right:20%">gross value add</div></span></div>
+              </div>
+            </div>
+            <div class="row" style="min-height:30px;">
+              <div id="htmlwidget-63917f2a8b0edb858fc5" style="width:100%;height:80px;" class="highchart html-widget"></div>
+              <script type="application/json" data-for="htmlwidget-63917f2a8b0edb858fc5">{"x":{"hc_opts":{"chart":{"reflow":true,"height":80},"title":{"text":null},"yAxis":{"title":{"text":["round","gva_total/1000","1"]},"type":"linear","min":20},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false,"pointPlacement":"on"},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"fy_start":"2016-17","date":"2016-01-01","gva_cc":18233,"gva_embed":10018,"gva_total":28250.9631758877,"gva_cc_growth_1yr":7.7,"y":28.3,"name":"2016-17"},{"fy_start":"2017-18","date":"2017-01-01","gva_cc":19269,"gva_embed":10268,"gva_total":29536.2026247753,"gva_cc_growth_1yr":4.59999999999999,"y":29.5,"name":"2017-18"},{"fy_start":"2018-19","date":"2018-01-01","gva_cc":20846,"gva_embed":11195,"gva_total":32040.8896237614,"gva_cc_growth_1yr":8.5,"y":32,"name":"2018-19"},{"fy_start":"2019-20","date":"2019-01-01","gva_cc":21152,"gva_embed":11510,"gva_total":32662.2665622826,"gva_cc_growth_1yr":1.90000000000001,"y":32.7,"name":"2019-20"},{"fy_start":"2020-21","date":"2020-01-01","gva_cc":22395,"gva_embed":11659,"gva_total":34054.1937755378,"gva_cc_growth_1yr":4.3,"y":34.1,"name":"2020-21"}],"type":"area","name":"Grass Value Add"}],"xAxis":{"type":"category","title":{"text":"fy_start"},"categories":null},"tooltip":{"valuePrefix":"$","valueSuffix":"B"}},"theme":{"chart":{"backgroundColor":null,"margins":[0,0,0,0],"spacingTop":0,"spacingRight":0,"spacingBottom":0,"spacingLeft":0,"plotBorderWidth":0,"borderWidth":0,"style":{"overflow":"visible"}},"xAxis":{"visible":false,"endOnTick":false,"startOnTick":false},"yAxis":{"visible":false,"endOnTick":false,"startOnTick":false},"tooltip":{"outside":false,"shadow":false,"borderColor":"transparent","borderWidth":0,"backgroundColor":"transparent","style":{"textOutline":"3px #f5ecdf"}},"plotOptions":{"series":{"marker":{"enabled":false},"lineWidth":4,"shadow":false,"fillOpacity":0.25,"color":"#F04E30","fillColor":{"linearGradient":{"x1":0,"y1":1,"x2":0,"y2":0},"stops":[[0,"#FFFFFF00"],[0.5,"#FFFFFF7F"],[1,"#FFFFFFFF"]]}}},"credits":{"enabled":false,"text":""}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div style="font-size:2vmin;font-family:VIC-Regular;text-align:left;min-height:30px;padding-left:10%;padding-right:10%;">Creative Industries contribution to the Victorian economy for financial year ending 2021</div>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6 my-3">
+              <div style="background-color:#97D5C9;border-radius:20px;padding:1em;">
+                <div id="htmlwidget-95db4765bb5acca63194" style="width:100%;height:350px;" class="highchart html-widget"></div>
+                <script type="application/json" data-for="htmlwidget-95db4765bb5acca63194">{"x":{"hc_opts":{"chart":{"reflow":true,"height":350},"title":{"text":"Share of Victorian GVA","widthAdjust":0,"style":{"font-size":"1.5rem"}},"yAxis":{"title":{"text":"Creative and Cultural Share of Victorian GVA"},"type":"linear","labels":{"format":"{text}%"},"min":6,"accessibility":{"enabled":true,"description":"share of Victorian GVA"}},"credits":{"enabled":false},"exporting":{"enabled":true,"allowHTML":true,"accessibility":{"enabled":true,"keyboardNavigation":{"enabled":true}},"buttons":{"contextButton":{"menuItems":["viewFullscreen","viewData","separator","downloadPNG","downloadSVG"]}},"csv":{"dateFormat":"%B %Y"},"tableCaption":false,"chartOptions":{"title":{"style":{"fontFamily":"Arial"}},"subtitle":{"style":{"fontFamily":"Arial"}},"xAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"yAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"caption":{"text":null},"chart":{"style":{"fontFamily":"Arial"}}}},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true,"pointPlacement":"on"},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"Creative and Cultrual Industry Share of Vic GVA","data":[{"fy_start":"2016-17","date":"2016-01-01","cc_gva_share":6.3,"y":6.3,"name":"2016-17"},{"fy_start":"2017-18","date":"2017-01-01","cc_gva_share":6.4,"y":6.4,"name":"2017-18"},{"fy_start":"2018-19","date":"2018-01-01","cc_gva_share":6.7,"y":6.7,"name":"2018-19"},{"fy_start":"2019-20","date":"2019-01-01","cc_gva_share":6.9,"y":6.9,"name":"2019-20"},{"fy_start":"2020-21","date":"2020-01-01","cc_gva_share":7.2,"y":7.2,"name":"2020-21"}],"type":"area","accessibility":{"enabled":true,"description":"this chart shows share of Victorian GVA generated by creative industries"}}],"xAxis":{"type":"category","title":{},"tickmarkPlacement":"on","accessibility":{"enabled":true,"description":"financial year"}},"tooltip":{"valueSuffix":"%"},"colors":["#C82254"],"legend":{"enabled":false}},"theme":{"chart":{"backgroundColor":null,"style":{"fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)","color":"#5C2D91"}},"title":{"align":"left","style":{"color":"#5C2D91","fontFamily":"VIC-Regular","font-weight":"bold","font-size":"2rem","background-color":"#5C2D91"}},"subtitle":{"align":"left","style":{"color":"#5C2D91","fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)"}},"legend":{"itemStyle":{"fontFamily":"VIC-Regular","color":"#5C2D91"},"itemHoverStyle":{"color":"gray"}},"xAxis":{"labels":{"style":{"color":"#5C2D91","fontFamily":"VIC-Light","font-size":"11px"}},"title":{"align":"high","style":{"color":"#5C2D91","font-size":"11px"}},"lineWidth":1,"lineColor":"#5C2D91","tickPosition":"outside","tickColor":"#5C2D91","tickWidth":1,"tickLength":4},"yAxis":{"labels":{"useHTML":true,"style":{"color":"#5C2D91","fontFamily":"VIC-Light","font-size":"11px"},"y":5},"title":{"align":"high","style":{"color":"#5C2D91","font-size":"11px"}},"minorGridLineWidth":0,"majorGridLineWidth":1,"lineWidth":0,"lineColor":"transparent","opposite":false},"caption":{"style":{"color":"#5C2D91"}},"series":{"line":{"lineWidth":4},"spline":{"lineWidth":4},"area":{"lineWidth":4,"fillOpacity":0.4,"marker":{"enabled":false,"symbol":"circle","radius":2,"states":{"hover":{"enabled":true}}}}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Arial","VIC-Regular","VIC-Light"],"debug":false},"evals":[],"jsHooks":[]}</script>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 my-3">
+              <div style="background-color:#97D5C9;border-radius:20px;padding:1em;">
+                <div id="htmlwidget-8baccde88053f8e8e326" style="width:100%;height:350px;" class="highchart html-widget"></div>
+                <script type="application/json" data-for="htmlwidget-8baccde88053f8e8e326">{"x":{"hc_opts":{"chart":{"reflow":true,"height":350},"title":{"text":"GVA per Worker","widthAdjust":0,"style":{"font-size":"1.5rem"}},"yAxis":{"title":{"text":"gva_per_worker","enabled":false},"type":"linear","labels":{"format":"${text}"},"accessibility":{"enabled":true,"description":"GVA per worker"}},"credits":{"enabled":false},"exporting":{"enabled":true,"allowHTML":true,"accessibility":{"enabled":true,"keyboardNavigation":{"enabled":true}},"buttons":{"contextButton":{"menuItems":["viewFullscreen","viewData","separator","downloadPNG","downloadSVG"]}},"csv":{"dateFormat":"%B %Y"},"tableCaption":false,"chartOptions":{"title":{"style":{"fontFamily":"Arial"}},"subtitle":{"style":{"fontFamily":"Arial"}},"xAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"yAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"caption":{"text":null},"chart":{"style":{"fontFamily":"Arial"}}}},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true,"pointPlacement":"on"},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"Creative and Cultural GVA per Worker","data":[{"year":"2016-17","gva_stat":"Creative and Cultural GVA per Worker","gva_per_worker":110513,"y":110513,"name":"2016-17"},{"year":"2017-18","gva_stat":"Creative and Cultural GVA per Worker","gva_per_worker":115742,"y":115742,"name":"2017-18"},{"year":"2018-19","gva_stat":"Creative and Cultural GVA per Worker","gva_per_worker":114117,"y":114117,"name":"2018-19"},{"year":"2019-20","gva_stat":"Creative and Cultural GVA per Worker","gva_per_worker":105524,"y":105524,"name":"2019-20"},{"year":"2020-21","gva_stat":"Creative and Cultural GVA per Worker","gva_per_worker":105789,"y":105789,"name":"2020-21"}],"type":"line","accessibility":{"enabled":true,"description":"this chart compares Victorian and creative GVA per worker over time"}},{"name":"Victorian GVA per Worker","data":[{"year":"2016-17","gva_stat":"Victorian GVA per Worker","gva_per_worker":118614,"y":118614,"name":"2016-17"},{"year":"2017-18","gva_stat":"Victorian GVA per Worker","gva_per_worker":119798,"y":119798,"name":"2017-18"},{"year":"2018-19","gva_stat":"Victorian GVA per Worker","gva_per_worker":120045,"y":120045,"name":"2018-19"},{"year":"2019-20","gva_stat":"Victorian GVA per Worker","gva_per_worker":119409,"y":119409,"name":"2019-20"},{"year":"2020-21","gva_stat":"Victorian GVA per Worker","gva_per_worker":119844,"y":119844,"name":"2020-21"}],"type":"line","accessibility":{"enabled":true,"description":"this chart compares Victorian and creative GVA per worker over time"}}],"xAxis":{"type":"category","title":{},"tickInterval":1,"tickmarkPlacement":"on","accessibility":{"enabled":true,"description":"financial year"}},"tooltip":{"valuePrefix":"$"},"colors":["#C82254","#5C2D91"]},"theme":{"chart":{"backgroundColor":null,"style":{"fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)","color":"#5C2D91"}},"title":{"align":"left","style":{"color":"#5C2D91","fontFamily":"VIC-Regular","font-weight":"bold","font-size":"2rem","background-color":"#5C2D91"}},"subtitle":{"align":"left","style":{"color":"#5C2D91","fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)"}},"legend":{"itemStyle":{"fontFamily":"VIC-Regular","color":"#5C2D91"},"itemHoverStyle":{"color":"gray"}},"xAxis":{"labels":{"style":{"color":"#5C2D91","fontFamily":"VIC-Light","font-size":"11px"}},"title":{"align":"high","style":{"color":"#5C2D91","font-size":"11px"}},"lineWidth":1,"lineColor":"#5C2D91","tickPosition":"outside","tickColor":"#5C2D91","tickWidth":1,"tickLength":4},"yAxis":{"labels":{"useHTML":true,"style":{"color":"#5C2D91","fontFamily":"VIC-Light","font-size":"11px"},"y":5},"title":{"align":"high","style":{"color":"#5C2D91","font-size":"11px"}},"minorGridLineWidth":0,"majorGridLineWidth":1,"lineWidth":0,"lineColor":"transparent","opposite":false},"caption":{"style":{"color":"#5C2D91"}},"series":{"line":{"lineWidth":4},"spline":{"lineWidth":4},"area":{"lineWidth":4,"fillOpacity":0.4,"marker":{"enabled":false,"symbol":"circle","radius":2,"states":{"hover":{"enabled":true}}}}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Arial","VIC-Regular","VIC-Light"],"debug":false},"evals":[],"jsHooks":[]}</script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 my-3" style="background-color:#97D5C9;border-radius:20px;padding:1em;">
+              <div style="overflow-x:auto;">
+                <table class="gvatable" summary="Key Creative GVA Statistics">
+                  <thead>
+                    <tr>
+                      <th scope="col"> </th>
+                      <th scope="col">Current</th>
+                      <th scope="col">1 Year Growth</th>
+                      <th scope="col">5 Year Growth</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Creative and Cultural GVA</th>
+                      <td>$34.1B</td>
+                      <td>4.3% pa</td>
+                      <td>3.8% pa</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Creative Share of Victorian GVA</th>
+                      <td>7.2%</td>
+                      <td>0.3 pp</td>
+                      <td>0.9 pp</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Creative GVA per Worker</th>
+                      <td>$105,789</td>
+                      <td>0.3% pa</td>
+                      <td>-0.9% pa</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="lib/jquery-3.5.1/jquery.min.js"></script>
+<script src="lib/proj4js-2.3.15/proj4.js"></script>
+<link href="lib/highcharts-10.2.0/css/motion.css" rel="stylesheet" />
+<script src="lib/highcharts-10.2.0/highcharts.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-3d.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-more.js"></script>
+<script src="lib/highcharts-10.2.0/modules/stock.js"></script>
+<script src="lib/highcharts-10.2.0/modules/map.js"></script>
+<script src="lib/highcharts-10.2.0/modules/accessibility.js"></script>
+<script src="lib/highcharts-10.2.0/modules/data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/offline-exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/drilldown.js"></script>
+<script src="lib/highcharts-10.2.0/modules/item-series.js"></script>
+<script src="lib/highcharts-10.2.0/modules/overlapping-datalabels.js"></script>
+<script src="lib/highcharts-10.2.0/modules/annotations.js"></script>
+<script src="lib/highcharts-10.2.0/modules/export-data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/funnel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/heatmap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/treemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sankey.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dependency-wheel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/organization.js"></script>
+<script src="lib/highcharts-10.2.0/modules/solid-gauge.js"></script>
+<script src="lib/highcharts-10.2.0/modules/streamgraph.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sunburst.js"></script>
+<script src="lib/highcharts-10.2.0/modules/vector.js"></script>
+<script src="lib/highcharts-10.2.0/modules/wordcloud.js"></script>
+<script src="lib/highcharts-10.2.0/modules/xrange.js"></script>
+<script src="lib/highcharts-10.2.0/modules/tilemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/venn.js"></script>
+<script src="lib/highcharts-10.2.0/modules/gantt.js"></script>
+<script src="lib/highcharts-10.2.0/modules/timeline.js"></script>
+<script src="lib/highcharts-10.2.0/modules/parallel-coordinates.js"></script>
+<script src="lib/highcharts-10.2.0/modules/bullet.js"></script>
+<script src="lib/highcharts-10.2.0/modules/coloraxis.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dumbbell.js"></script>
+<script src="lib/highcharts-10.2.0/modules/lollipop.js"></script>
+<script src="lib/highcharts-10.2.0/modules/series-label.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost-canvas.js"></script>
+<script src="lib/highcharts-10.2.0/plugins/motion.js"></script>
+<script src="lib/highcharts-10.2.0/custom/reset.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost.js"></script>
+<script src="lib/highchart-binding-0.9.4.9001/highchart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js" crossorigin="anonymous"></script>
+  <title>Small Businesses by Industry</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<html lang="en">
+  <body>
+    <div class="tourism" style="width: 100%;">
+      <div class="grid grid-pad">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 my-3" style="background-color:#0E4E96;border-radius:20px;padding:1em;">
+              <div id="htmlwidget-afa8d6182eabaf9df250" style="width:100%;height:262.5px;" class="highchart html-widget"></div>
+              <script type="application/json" data-for="htmlwidget-afa8d6182eabaf9df250">{"x":{"hc_opts":{"chart":{"reflow":true,"height":262.5},"title":{"text":"Small Creative Businesses (1-19 Employees)","widthAdjust":0,"style":{"font-size":"1.5rem"}},"yAxis":{"title":{"text":"sml_bus","enabled":false},"type":"linear","accesibility":{"enabled":true,"description":"share of small creative businesses by size"}},"credits":{"enabled":false},"exporting":{"enabled":true,"allowHTML":true,"accessibility":{"enabled":true,"keyboardNavigation":{"enabled":true}},"buttons":{"contextButton":{"menuItems":["viewFullscreen","viewData","separator","downloadPNG","downloadSVG"]}},"csv":{"dateFormat":"%B %Y"},"tableCaption":false,"chartOptions":{"title":{"style":{"fontFamily":"Arial"}},"subtitle":{"style":{"fontFamily":"Arial"}},"xAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"yAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"caption":{"text":null},"chart":{"style":{"fontFamily":"Arial"}}}},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"bar":{"dataLabels":{"enabled":false},"stacking":"normal","enableMouseTracking":true,"borderColor":"#0E4E96"}},"series":[{"name":"Other cultural goods manufacturing and sales","data":[{"year":"2021-22","cc_industry":"Other cultural goods manufacturing and sales","med_lar_bus":7,"sml_bus":31,"sol_bus":56,"med_lar_bus_share":0.7,"sml_bus_share":0.2,"sol_bus_share":0.2,"y":31,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Museums, libraries and archive","data":[{"year":"2021-22","cc_industry":"Museums, libraries and archive","med_lar_bus":6,"sml_bus":34,"sol_bus":62,"med_lar_bus_share":0.6,"sml_bus_share":0.2,"sol_bus_share":0.2,"y":34,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Music Composition and publishing","data":[{"year":"2021-22","cc_industry":"Music Composition and publishing","med_lar_bus":8,"sml_bus":160,"sol_bus":443,"med_lar_bus_share":0.8,"sml_bus_share":0.9,"sol_bus_share":1.5,"y":160,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Fashion","data":[{"year":"2021-22","cc_industry":"Fashion","med_lar_bus":28,"sml_bus":259,"sol_bus":517,"med_lar_bus_share":2.8,"sml_bus_share":1.5,"sol_bus_share":1.7,"y":259,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Arts Education","data":[{"year":"2021-22","cc_industry":"Arts Education","med_lar_bus":9,"sml_bus":435,"sol_bus":655,"med_lar_bus_share":0.9,"sml_bus_share":2.4,"sol_bus_share":2.2,"y":435,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Visual Arts and Craft Professionals","data":[{"year":"2021-22","cc_industry":"Visual Arts and Craft Professionals","med_lar_bus":10,"sml_bus":704,"sol_bus":2488,"med_lar_bus_share":1,"sml_bus_share":4,"sol_bus_share":8.3,"y":704,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Literature and print media","data":[{"year":"2021-22","cc_industry":"Literature and print media","med_lar_bus":123,"sml_bus":919,"sol_bus":1048,"med_lar_bus_share":12.5,"sml_bus_share":5.2,"sol_bus_share":3.5,"y":919,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Performing Arts","data":[{"year":"2021-22","cc_industry":"Performing Arts","med_lar_bus":52,"sml_bus":1089,"sol_bus":4993,"med_lar_bus_share":5.3,"sml_bus_share":6.1,"sol_bus_share":16.7,"y":1089,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Broadcasting, electronic or digital media, and film","data":[{"year":"2021-22","cc_industry":"Broadcasting, electronic or digital media, and film","med_lar_bus":106,"sml_bus":1245,"sol_bus":2399,"med_lar_bus_share":10.7,"sml_bus_share":7,"sol_bus_share":8,"y":1245,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Advertising","data":[{"year":"2021-22","cc_industry":"Advertising","med_lar_bus":100,"sml_bus":1407,"sol_bus":2141,"med_lar_bus_share":10.1,"sml_bus_share":7.9,"sol_bus_share":7.2,"y":1407,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Architectural Services and other design services","data":[{"year":"2021-22","cc_industry":"Architectural Services and other design services","med_lar_bus":125,"sml_bus":3769,"sol_bus":5592,"med_lar_bus_share":12.7,"sml_bus_share":21.2,"sol_bus_share":18.7,"y":3769,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}},{"name":"Computer System design","data":[{"year":"2021-22","cc_industry":"Computer System design","med_lar_bus":413,"sml_bus":7746,"sol_bus":9439,"med_lar_bus_share":41.8,"sml_bus_share":43.5,"sol_bus_share":31.6,"y":7746,"name":"2021-22"}],"type":"bar","accessibility":{"enabled":true,"description":"this chart shows an industry breakdown of small creative businesses (with 1-19 employees)"}}],"xAxis":{"type":"category","title":{},"labels":{"enabled":false},"tickLength":0,"accesibility":{"enabled":true,"description":"year"}},"tooltip":{"formatter":"function(){\n                return ('<b> ' + this.point.cc_industry + ' <\/b>' + \n                '<br> Small Businesses: ' + this.point.sml_bus +\n                '<br> Share: ' + this.point.sml_bus_share + '%')\n                }"},"colors":["#61C2EE","#C9CBCA","#72BF44","#0072BC","#00713C","#747675","#073142"],"caption":{"text":"Figures from 2021-22"}},"theme":{"chart":{"backgroundColor":null,"style":{"fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)","color":"white"}},"title":{"align":"left","style":{"color":"white","fontFamily":"VIC-Regular","font-weight":"bold","font-size":"2rem","background-color":"white"}},"subtitle":{"align":"left","style":{"color":"white","fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)"}},"legend":{"itemStyle":{"fontFamily":"VIC-Regular","color":"white"},"itemHoverStyle":{"color":"gray"}},"xAxis":{"labels":{"style":{"color":"white","fontFamily":"VIC-Light","font-size":"11px"}},"title":{"align":"high","style":{"color":"white","font-size":"11px"}},"lineWidth":1,"lineColor":"white","tickPosition":"outside","tickColor":"white","tickWidth":1,"tickLength":4},"yAxis":{"labels":{"useHTML":true,"style":{"color":"white","fontFamily":"VIC-Light","font-size":"11px"},"y":5},"title":{"align":"high","style":{"color":"white","font-size":"11px"}},"minorGridLineWidth":0,"majorGridLineWidth":1,"lineWidth":0,"lineColor":"transparent","opposite":false},"caption":{"style":{"color":"white"}},"series":{"line":{"lineWidth":4},"spline":{"lineWidth":4},"area":{"lineWidth":4,"fillOpacity":0.4,"marker":{"enabled":false,"symbol":"circle","radius":2,"states":{"hover":{"enabled":true}}}}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Arial","VIC-Regular","VIC-Light"],"debug":false},"evals":["hc_opts.tooltip.formatter"],"jsHooks":[]}</script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+</html>
