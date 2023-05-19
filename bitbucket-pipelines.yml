@@ -1,0 +1,10 @@
+image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: 'Pull latest code to Squiz Matrix'
+          script: 
+            - curl https://creative.vic.gov.au/_designs/integration-points/rstudio/master?SQ_GIT_BRIDGE_ACTION=pull
+
