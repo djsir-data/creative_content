@@ -76,28 +76,5 @@ table>tbody>tr>td{
   color: #5C2D91
 }
 
-@media only screen and (max-width: 750px) {
-  body {
-    background-color: lightblue;
-  }
-  .tourism-box-1250 {
-    height: 1250px;
-  }
-  .tourism-box-1200 {
-    height: 1200px;
-  }
-  .tourism-box-1100 {
-    height: 1100px;
-  }
-  .tourism-box-1000 {
-    height: 1000px;
-  }
-  .tourism-box-900 {
-    height: 900px;
-  }
-  .tourism-box-850 {
-    height: 850px;
-  }
-  
-}
+
 
