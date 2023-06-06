@@ -74,4 +74,58 @@ table>tbody>tr>td{
 
 
 
+.highcharts-table-caption {
+    margin-bottom: 5px;
+    padding-left: 20px;
+    font-family: 'Vic-Regular';
+    font-size: 10pt;
+    background-color: white;
+    border: 1px solid silver;
+    color: black;
+
+}
+
+.highcharts-data-table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: white;
+    min-width: 100%;
+    margin-top: 10px;
+    color: #111111;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th {
+    text-align: center;
+    font-family: 'Vic-Regular';
+    font-size: 10pt;
+    border: 1px solid silver;
+    padding: 0.5em;
+}
+
+.highcharts-data-table tr:nth-child(even),
+.highcharts-data-table thead tr {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {   
+    background: #eff;
+}
+
+.collapse-control::before {
+  display: inline-block;
+  content: '\203A';
+  font-size: calc(var(--bs-body-font-size) * 2);
+  font-weight: bold;
+  transition-timing-function: ease;
+  transition: transform 0.35s;
+  margin-right: 0.8rem;
+  transform: rotate(90deg);
+}
+.collapse-control[aria-expanded='false']::before {
+  transform: rotate(0deg);
+}
+
+
+
 
