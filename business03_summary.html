@@ -10,8 +10,22 @@
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js" crossorigin="anonymous"></script>
   <title>Creative business overview</title>
   <meta charset="utf-8"/>
-  <meta property="article:published_time" content="2023-06-27T11:55:09"/>
+  <meta property="article:published_time" content="2023-06-29T17:06:42"/>
   <link rel="stylesheet" href="style.css"/>
+  <script>window.addEventListener('DOMContentLoaded', (event) => {
+            var charts = Highcharts.charts;
+            for (var i = 0; i < charts.length; i++) {
+              console.log(i);
+              Highcharts.addEvent(charts[i], 'aftergetTableAST', function(e) {
+                 //console.log(e);
+                 console.log('#' + e.tree.id  + ' td.highcharts-number');
+                 setTimeout(function(){
+                   $('#' + e.tree.id  + ' td.highcharts-number').each(function() { $(this).html(parseFloat($(this).text()).toLocaleString())});
+                 }, 300);
+              });
+            }
+         });
+      </script>
 </head>
 <html lang="en">
   <body>
