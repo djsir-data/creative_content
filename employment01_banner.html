@@ -10,8 +10,22 @@
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js" crossorigin="anonymous"></script>
   <title>Current creative employment</title>
   <meta charset="utf-8"/>
-  <meta property="article:published_time" content="2023-06-06T15:24:47"/>
+  <meta property="article:published_time" content="2023-06-29T17:06:34"/>
   <link rel="stylesheet" href="style.css"/>
+  <script>window.addEventListener('DOMContentLoaded', (event) => {
+            var charts = Highcharts.charts;
+            for (var i = 0; i < charts.length; i++) {
+              console.log(i);
+              Highcharts.addEvent(charts[i], 'aftergetTableAST', function(e) {
+                 //console.log(e);
+                 console.log('#' + e.tree.id  + ' td.highcharts-number');
+                 setTimeout(function(){
+                   $('#' + e.tree.id  + ' td.highcharts-number').each(function() { $(this).html(parseFloat($(this).text()).toLocaleString())});
+                 }, 300);
+              });
+            }
+         });
+      </script>
 </head>
 <html lang="en">
   <body>
@@ -21,7 +35,7 @@
           <figcaption hidden="hidden">
             <strong id="employment-caption">employment</strong>
             <br/>
-            <span id="employment-summary">Creative employment in Victoria as at February 2023, smoothed using a 12 month rolling average.</span>
+            <span id="employment-summary">Creative employment in Victoria as at May 2023, smoothed using a 12 month rolling average.</span>
           </figcaption>
           <div id="employment" aria-labelledby="employment-caption" aria-describedby="employment-summary" class="container" style="background: #1D184B;padding:1em;border-radius: 24px;color:white;">
             <div class="row">
@@ -29,12 +43,12 @@
             </div>
             <div class="row">
               <div class="col-12">
-                <div style="font-size:16.6666666666667vw;font-family:VIC-Bold;text-align:center;white-space: nowrap;width:100%;height:20.6666666666667vw;"><span>305,543</span></div>
+                <div style="font-size:16.6666666666667vw;font-family:VIC-Bold;text-align:center;white-space: nowrap;width:100%;height:20.6666666666667vw;"><span>311,309</span></div>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <div style="font-size:1.5em;font-family:VIC-Regular;text-align:left;min-height:30px;padding-left:20%;padding-right:15%;padding-top:30px;">Creative employment in Victoria as at February 2023, smoothed using a 12 month rolling average.</div>
+                <div style="font-size:1.5em;font-family:VIC-Regular;text-align:left;min-height:30px;padding-left:20%;padding-right:15%;padding-top:30px;">Creative employment in Victoria as at May 2023, smoothed using a 12 month rolling average.</div>
                 <div style="font-size:0.8em;font-family:VIC-Light;text-align:right;min-height:30px;padding-left:20%;padding-right:15%;padding-top:15px;">Source: Australian Bureau of Statistics, Creative Victoria.</div>
               </div>
             </div>
