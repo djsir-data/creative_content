@@ -3,27 +3,27 @@
   font-style: normal;
   src: url("./fonts/VIC-Light.eot");
   src: url("./fonts/VIC-Light-iefix.eot?#iefix") format("embedded-opentype"),
-       url("./fonts/VIC-Light.woff2") format("woff2"),
-       url("./fonts/VIC-Light.woff") format("woff"),
-       url("./fonts/VIC-Light.ttf") format("truetype");
+    url("./fonts/VIC-Light.woff2") format("woff2"),
+    url("./fonts/VIC-Light.woff") format("woff"),
+    url("./fonts/VIC-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "VIC-Regular";
   font-style: normal;
   src: url("./fonts/VIC-Regular.eot");
   src: url("./fonts/VIC-Regular-iefix.eot?#iefix") format("embedded-opentype"),
-       url("./fonts/VIC-Regular.woff2") format("woff2"),
-       url("./fonts/VIC-Regular.woff") format("woff"),
-       url("./fonts/VIC-Regular.ttf") format("truetype");
+    url("./fonts/VIC-Regular.woff2") format("woff2"),
+    url("./fonts/VIC-Regular.woff") format("woff"),
+    url("./fonts/VIC-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "VIC-SemiBold";
   font-style: normal;
   src: url("./fonts/VIC-SemiBold.eot");
   src: url("./fonts/VIC-SemiBold-iefix.eot?#iefix") format("embedded-opentype"),
-       url("./fonts/VIC-SemiBold.woff2") format("woff2"),
-       url("./fonts/VIC-SemiBold.woff") format("woff"),
-       url("./fonts/VIC-Regular.ttf") format("truetype");
+    url("./fonts/VIC-SemiBold.woff2") format("woff2"),
+    url("./fonts/VIC-SemiBold.woff") format("woff"),
+    url("./fonts/VIC-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -31,90 +31,118 @@
   font-style: normal;
   src: url("./fonts/VIC-Bold.eot");
   src: url("./fonts/VIC-Bold-iefix.eot?#iefix") format("embedded-opentype"),
-       url("./fonts/VIC-Bold.woff2") format("woff2"),
-       url("./fonts/VIC-Bold.woff") format("woff"),
-       url("./fonts/VIC-Bold.ttf") format("truetype");
+    url("./fonts/VIC-Bold.woff2") format("woff2"),
+    url("./fonts/VIC-Bold.woff") format("woff"),
+    url("./fonts/VIC-Bold.ttf") format("truetype");
 }
 
 .current {
   font-size: 3.5em;
-  font-family: 'Vic-Bold'
+  font-family: "Vic-Bold";
 }
 
 .current-small {
   font-size: 2em;
-  font-family: 'Vic-Bold'
+  font-family: "Vic-Bold";
 }
 
 .current {
   font-size: 3.5em;
-  font-family: 'Vic-Bold'
+  font-family: "Vic-Bold";
 }
 
 body {
-  font-family: 'Vic-Regular';
+  font-family: "Vic-Regular";
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Vic-SemiBold';
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Vic-SemiBold";
 }
 
 table {
-  font-family: 'Vic-Regular';
-  width: 100%
+  font-family: "Vic-Regular";
+  width: 100%;
 }
 
-table>thead>tr>th:not(:first-child){
+table > thead > tr > th:not(:first-child) {
   text-align: center;
 }
-table>tbody>tr>td{
+table > tbody > tr > td {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .margin-mimic {
+    margin-left: 62px;
+    margin-right: 62px;
+  }
+}
 
+@media (min-width: 1024px) {
+  .margin-mimic {
+    margin-left: 142px;
+    margin-right: 142px;
+  }
+}
 
+@media (min-width: 1280px) {
+  .margin-mimic {
+    margin-left: 270px;
+    margin-right: 270px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .margin-mimic {
+    margin-left: 350px;
+    margin-right: 350px;
+  }
+}
 
 .highcharts-table-caption {
-    margin-bottom: 5px;
-    padding-left: 20px;
-    font-family: 'Vic-Regular';
-    font-size: 10pt;
-    background-color: white;
-    border: 1px solid silver;
-    color: black;
-
+  margin-bottom: 5px;
+  padding-left: 20px;
+  font-family: "Vic-Regular";
+  font-size: 10pt;
+  background-color: white;
+  border: 1px solid silver;
+  color: black;
 }
 
 .highcharts-data-table table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    background: white;
-    min-width: 100%;
-    margin-top: 10px;
-    color: #111111;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: white;
+  min-width: 100%;
+  margin-top: 10px;
+  color: #111111;
 }
 
 .highcharts-data-table td,
 .highcharts-data-table th {
-    text-align: center;
-    font-family: 'Vic-Regular';
-    font-size: 10pt;
-    border: 1px solid silver;
-    padding: 0.5em;
+  text-align: center;
+  font-family: "Vic-Regular";
+  font-size: 10pt;
+  border: 1px solid silver;
+  padding: 0.5em;
 }
 
 .highcharts-data-table tr:nth-child(even),
 .highcharts-data-table thead tr {
-    background: #f8f8f8;
+  background: #f8f8f8;
 }
 
-.highcharts-data-table tr:hover {   
-    background: #eff;
+.highcharts-data-table tr:hover {
+  background: #eff;
 }
 
 .collapse-control::before {
   display: inline-block;
-  content: '\203A';
+  content: "\203A";
   font-size: calc(var(--bs-body-font-size) * 2);
   font-weight: bold;
   transition-timing-function: ease;
@@ -122,10 +150,6 @@ table>tbody>tr>td{
   margin-right: 0.8rem;
   transform: rotate(90deg);
 }
-.collapse-control[aria-expanded='false']::before {
+.collapse-control[aria-expanded="false"]::before {
   transform: rotate(0deg);
 }
-
-
-
-
