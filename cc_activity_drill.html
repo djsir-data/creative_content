@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="lib/jquery-3.5.1/jquery.min.js"></script>
+<script src="lib/proj4js-2.3.15/proj4.js"></script>
+<link href="lib/highcharts-10.2.0/css/motion.css" rel="stylesheet" />
+<script src="lib/highcharts-10.2.0/highcharts.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-3d.js"></script>
+<script src="lib/highcharts-10.2.0/highcharts-more.js"></script>
+<script src="lib/highcharts-10.2.0/modules/stock.js"></script>
+<script src="lib/highcharts-10.2.0/modules/map.js"></script>
+<script src="lib/highcharts-10.2.0/modules/accessibility.js"></script>
+<script src="lib/highcharts-10.2.0/modules/data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/offline-exporting.js"></script>
+<script src="lib/highcharts-10.2.0/modules/drilldown.js"></script>
+<script src="lib/highcharts-10.2.0/modules/item-series.js"></script>
+<script src="lib/highcharts-10.2.0/modules/overlapping-datalabels.js"></script>
+<script src="lib/highcharts-10.2.0/modules/annotations.js"></script>
+<script src="lib/highcharts-10.2.0/modules/export-data.js"></script>
+<script src="lib/highcharts-10.2.0/modules/funnel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/heatmap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/treemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sankey.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dependency-wheel.js"></script>
+<script src="lib/highcharts-10.2.0/modules/organization.js"></script>
+<script src="lib/highcharts-10.2.0/modules/solid-gauge.js"></script>
+<script src="lib/highcharts-10.2.0/modules/streamgraph.js"></script>
+<script src="lib/highcharts-10.2.0/modules/sunburst.js"></script>
+<script src="lib/highcharts-10.2.0/modules/vector.js"></script>
+<script src="lib/highcharts-10.2.0/modules/wordcloud.js"></script>
+<script src="lib/highcharts-10.2.0/modules/xrange.js"></script>
+<script src="lib/highcharts-10.2.0/modules/tilemap.js"></script>
+<script src="lib/highcharts-10.2.0/modules/venn.js"></script>
+<script src="lib/highcharts-10.2.0/modules/gantt.js"></script>
+<script src="lib/highcharts-10.2.0/modules/timeline.js"></script>
+<script src="lib/highcharts-10.2.0/modules/parallel-coordinates.js"></script>
+<script src="lib/highcharts-10.2.0/modules/bullet.js"></script>
+<script src="lib/highcharts-10.2.0/modules/coloraxis.js"></script>
+<script src="lib/highcharts-10.2.0/modules/dumbbell.js"></script>
+<script src="lib/highcharts-10.2.0/modules/lollipop.js"></script>
+<script src="lib/highcharts-10.2.0/modules/series-label.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost-canvas.js"></script>
+<script src="lib/highcharts-10.2.0/plugins/motion.js"></script>
+<script src="lib/highcharts-10.2.0/custom/reset.js"></script>
+<script src="lib/highcharts-10.2.0/modules/boost.js"></script>
+<script src="lib/highchart-binding-0.9.4.9001/highchart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js" crossorigin="anonymous"></script>
+  <title>Creative and cultural visitor activity in Victoria</title>
+  <meta property="article:published_time" content="2024-10-30T15:02:22"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script>window.addEventListener('DOMContentLoaded', (event) => {
+            var charts = Highcharts.charts;
+            var dt_event = new CustomEvent("eventDT", { detail: 'chart data table clicked' });
+            for (var i = 0; i < charts.length; i++) {
+              Highcharts.addEvent(charts[i], 'aftergetTableAST', function(e) {
+                 window.parent.document.dispatchEvent(dt_event);
+                 console.log('#' + e.tree.id  + ' td.highcharts-number');
+                 setTimeout(function(){
+                   $('#' + e.tree.id  + ' td.highcharts-number').each(function() { $(this).html(parseFloat($(this).text()).toLocaleString())});
+                   var close = $( "li:contains('Hide data table'):hidden" );
+                   close.click(function(e){
+                     console.log('close table menu clicked');
+                     window.parent.document.dispatchEvent(dt_event);
+                   });
+                 }, 300);
+              });
+            }
+         });
+      </script>
+</head>
+<body>
+  <div class="tourism" style="width: 100%;">
+    <div class="grid grid-pad">
+      <div class="margin-mimic">
+        <div class="row">
+          <div class="col-12 my-3" style="background-color:#E7f6FC;color:black;border-radius:24px;padding:1em;">
+            <div id="visitors-activity-drilldown" style="width:100%;height:525px;" class="highchart html-widget "></div>
+            <script type="application/json" data-for="visitors-activity-drilldown">{"x":{"hc_opts":{"chart":{"reflow":true,"height":525,"marginLeft":350},"title":{"text":"Activity participation of creative and cultural visitors to Victoria"},"yAxis":{"title":{"text":"Percent of visitors"},"type":"linear","labels":{"format":"{text}%"},"accessibility":{"enabled":true,"description":"Proportion of visitors that participate in specified creative or cultural activity"}},"credits":{"enabled":false},"exporting":{"enabled":true,"allowHTML":true,"allowTableSorting":false,"accessibility":{"enabled":true,"keyboardNavigation":{"enabled":true}},"buttons":{"contextButton":{"menuItems":["viewFullscreen","viewData","separator","downloadPNG","downloadSVG","downloadCSV"]}},"csv":{"dateFormat":"%B %Y"},"chartOptions":{"title":{"style":{"fontFamily":"Arial"}},"subtitle":{"style":{"fontFamily":"Arial"}},"legend":{"enabled":true,"itemStyle":{"fontFamily":"Arial"}},"xAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"yAxis":{"labels":{"style":{"fontFamily":"Arial"}}},"caption":{"style":{"fontFamily":"Arial"}},"chart":{"style":{"fontFamily":"Arial"}}}},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"date":"2024-06-01","activity":"Visit museums or art galleries","Visitors":5494624.829663036,"Percent of visitors":46.68107143799553,"y":46.68107143799553,"name":"Visit museums or art galleries","drilldown":"Visit museums or art galleries"},{"date":"2024-06-01","activity":"Attend theatre, concerts or other performing arts","Visitors":3148663.739021529,"Percent of visitors":26.75032445199793,"y":26.75032445199793,"name":"Attend theatre, concerts or other performing arts","drilldown":"Attend theatre, concerts or other performing arts"},{"date":"2024-06-01","activity":"Visit history / heritage buildings, sites or monuments","Visitors":2885211.534689251,"Percent of visitors":24.51209499099092,"y":24.51209499099092,"name":"Visit history / heritage buildings, sites or monuments","drilldown":"Visit history / heritage buildings, sites or monuments"},{"date":"2024-06-01","activity":"Attend festivals / fairs or cultural events","Visitors":1895301.396225059,"Percent of visitors":16.10204565670782,"y":16.10204565670782,"name":"Attend festivals / fairs or cultural events","drilldown":"Attend festivals / fairs or cultural events"},{"date":"2024-06-01","activity":"Indigenous cultural activity","Visitors":1239811.41728641,"Percent of visitors":10.53315324233678,"y":10.53315324233678,"name":"Indigenous cultural activity","drilldown":"Indigenous cultural activity"},{"date":"2024-06-01","activity":"Visit art / craft workshops / studios","Visitors":703563.9386308498,"Percent of visitors":5.977317742081099,"y":5.977317742081099,"name":"Visit art / craft workshops / studios","drilldown":"Visit art / craft workshops / studios"}],"type":"bar","name":"Creative Cultural Activity","colorByPoint":true}],"xAxis":{"type":"category","title":{"text":""},"accesibility":{"enabled":true}},"drilldown":{"allowPointDrilldown":true,"series":[{"activity":"Attend festivals / fairs or cultural events","data":[{"source":"str:database:IVSTrips","date":"2024-06-01","Visitors":281418.1728750594,"Percent of visitors":18.89339165262462,"Type of traveller":"International","name":"International","y":18.89339165262462},{"source":"str:database:NVSOvernightTrips98onwards","date":"2024-06-01","Visitors":731353.6979000001,"Percent of visitors":13.8344743062388,"Type of traveller":"Domestic Overnight","name":"Domestic Overnight","y":13.8344743062388},{"source":"str:database:NVSdaytrip1998onwards","date":"2024-06-01","Visitors":882529.5254499996,"Percent of visitors":17.66967806730721,"Type of traveller":"Domestic Day","name":"Domestic Day","y":17.66967806730721}],"id":"Attend festivals / fairs or cultural events","name":"Attend festivals / fairs or cultural events","type":"bar"},{"activity":"Attend theatre, concerts or other performing arts","data":[{"source":"str:database:IVSTrips","date":"2024-06-01","Visitors":325640.4001815291,"Percent of visitors":21.8623110074648,"Type of traveller":"International","name":"International","y":21.8623110074648},{"source":"str:database:NVSOvernightTrips98onwards","date":"2024-06-01","Visitors":1528836.31342,"Percent of visitors":28.91986019512247,"Type of traveller":"Domestic Overnight","name":"Domestic Overnight","y":28.91986019512247},{"source":"str:database:NVSdaytrip1998onwards","date":"2024-06-01","Visitors":1294187.02542,"Percent of visitors":25.91173149294587,"Type of traveller":"Domestic Day","name":"Domestic Day","y":25.91173149294587}],"id":"Attend theatre, concerts or other performing arts","name":"Attend theatre, concerts or other performing arts","type":"bar"},{"activity":"Indigenous cultural activity","data":[{"source":"str:database:IVSTrips","date":"2024-06-01","Visitors":562520.7366464097,"Percent of visitors":37.76559445896903,"Type of traveller":"International","name":"International","y":37.76559445896903},{"source":"str:database:NVSOvernightTrips98onwards","date":"2024-06-01","Visitors":397135.11034,"Percent of visitors":7.51230970169412,"Type of traveller":"Domestic Overnight","name":"Domestic Overnight","y":7.51230970169412},{"source":"str:database:NVSdaytrip1998onwards","date":"2024-06-01","Visitors":280155.5703,"Percent of visitors":5.609170677252671,"Type of traveller":"Domestic Day","name":"Domestic Day","y":5.609170677252671}],"id":"Indigenous cultural activity","name":"Indigenous cultural activity","type":"bar"},{"activity":"Visit art / craft workshops / studios","data":[{"source":"str:database:IVSTrips","date":"2024-06-01","Visitors":171342.8384708499,"Percent of visitors":11.50333441877401,"Type of traveller":"International","name":"International","y":11.50333441877401},{"source":"str:database:NVSOvernightTrips98onwards","date":"2024-06-01","Visitors":225812.99916,"Percent of visitors":4.271536663947923,"Type of traveller":"Domestic Overnight","name":"Domestic Overnight","y":4.271536663947923},{"source":"str:database:NVSdaytrip1998onwards","date":"2024-06-01","Visitors":306408.101,"Percent of visitors":6.134789087225493,"Type of traveller":"Domestic Day","name":"Domestic Day","y":6.134789087225493}],"id":"Visit art / craft workshops / studios","name":"Visit art / craft workshops / studios","type":"bar"},{"activity":"Visit history / heritage buildings, sites or monuments","data":[{"source":"str:database:IVSTrips","date":"2024-06-01","Visitors":755988.8781192515,"Percent of visitors":50.75434117638379,"Type of traveller":"International","name":"International","y":50.75434117638379},{"source":"str:database:NVSOvernightTrips98onwards","date":"2024-06-01","Visitors":1139995.13277,"Percent of visitors":21.56444059670331,"Type of traveller":"Domestic Overnight","name":"Domestic Overnight","y":21.56444059670331},{"source":"str:database:NVSdaytrip1998onwards","date":"2024-06-01","Visitors":989227.5238000001,"Percent of visitors":19.80594572397202,"Type of traveller":"Domestic Day","name":"Domestic Day","y":19.80594572397202}],"id":"Visit history / heritage buildings, sites or monuments","name":"Visit history / heritage buildings, sites or monuments","type":"bar"},{"activity":"Visit museums or art galleries","data":[{"source":"str:database:IVSTrips","date":"2024-06-01","Visitors":1154673.243773037,"Percent of visitors":77.52055811653628,"Type of traveller":"International","name":"International","y":77.52055811653628},{"source":"str:database:NVSOvernightTrips98onwards","date":"2024-06-01","Visitors":2749471.320769999,"Percent of visitors":52.00970536165113,"Type of traveller":"Domestic Overnight","name":"Domestic Overnight","y":52.00970536165113},{"source":"str:database:NVSdaytrip1998onwards","date":"2024-06-01","Visitors":1590480.265120001,"Percent of visitors":31.84400458754741,"Type of traveller":"Domestic Day","name":"Domestic Day","y":31.84400458754741}],"id":"Visit museums or art galleries","name":"Visit museums or art galleries","type":"bar"}]},"colors":["#0E4E96","#F04E30","#B63E97","#00AE4D","#EE2C72","#00AAA5"],"tooltip":{"valueSuffix":"%","valueDecimals":1}},"theme":{"chart":{"backgroundColor":null},"title":{"align":"left","style":{"color":"#1D184B","fontFamily":"VIC-Regular","font-weight":"bold","font-size":"2rem","background-color":"#1D184B"}},"subtitle":{"align":"left","style":{"color":"#1D184B","fontFamily":"VIC-Regular","font-size":"var(--bs-body-font-size)"}},"legend":{"itemStyle":{"fontFamily":"VIC-Regular","color":"#1D184B"},"itemHoverStyle":{"color":"gray"}},"xAxis":{"labels":{"style":{"color":"#1D184B","fontFamily":"VIC-Light","font-size":"11px"}},"title":{"align":"high","style":{"color":"#1D184B","font-size":"11px"}},"lineWidth":1,"lineColor":"#1D184B","tickPosition":"outside","tickColor":"#1D184B","tickWidth":1,"tickLength":4},"yAxis":{"labels":{"useHTML":true,"style":{"color":"#1D184B","fontFamily":"VIC-Light","font-size":"11px"},"y":5},"title":{"align":"high","style":{"color":"#1D184B","font-size":"11px"}},"minorGridLineWidth":0,"majorGridLineWidth":1,"lineWidth":0,"lineColor":"transparent","opposite":false},"caption":{"style":{"color":"#1D184B"}},"series":{"line":{"lineWidth":4},"spline":{"lineWidth":4},"area":{"lineWidth":4,"fillOpacity":0.4,"marker":{"enabled":false,"symbol":"circle","radius":2,"states":{"hover":{"enabled":true}}}}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadCSV":"Download CSV","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","downloadXLS":"Download XLS","drillUpText":"◁ Back to {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":",","viewData":"View data table","viewFullscreen":"View in full screen","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["VIC-Regular","VIC-Light","Arial"],"google_fonts":false,"debug":false},"evals":[],"jsHooks":[]}</script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-right" style="color:#201547;font-size:0.8em;padding:20px;width:98%;">
+      <div class="col">
+        <span>
+          ^Source: 
+          <a style="color:#C94500" href="https://www.tra.gov.au/" target="_parent">Tourism Research Australia</a>
+           IVS/NVS surveys, all data 12 month rolling annual data.
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
