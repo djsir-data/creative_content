@@ -54,7 +54,7 @@
 <link href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js" crossorigin="anonymous"></script>
   <title>Visitors to Victoria</title>
-  <meta property="article:published_time" content="2025-01-15T04:43:52"/>
+  <meta property="article:published_time" content="2025-02-07T06:08:00"/>
   <link rel="stylesheet" href="style.css"/>
   <script>window.addEventListener('DOMContentLoaded', (event) => {
             var charts = Highcharts.charts;
@@ -94,11 +94,11 @@
                   <span>Select Chart:</span>
                 </b>
                 <input type="radio" class="form-check-input" style="margin-left:15px;" name="select-creative-cultural-vic" id="btn-cc-visitors-victoria" value="cc-visitors-victoria" autocomplete="off" checked aria-checked="TRUE"/>
-                <label class="form-check-label" for="btn-cc-visitors-victoria">Victoria</label>
+                <label class="form-check-label" for="btn-cc-visitors-victoria">Creative &amp; cultural</label>
                 <input type="radio" class="form-check-input" style="margin-left:15px;" name="select-creative-cultural-vic" id="btn-cc-visitors-regional" value="cc-visitors-regional" autocomplete="off"/>
-                <label class="form-check-label" for="btn-cc-visitors-regional">Regional Victoria</label>
+                <label class="form-check-label" for="btn-cc-visitors-regional">Creative &amp; cultural - regional</label>
                 <input type="radio" class="form-check-input" style="margin-left:15px;" name="select-creative-cultural-vic" id="btn-cc-visitors-total" value="cc-visitors-total" autocomplete="off"/>
-                <label class="form-check-label" for="btn-cc-visitors-total">All visitors Victoria </label>
+                <label class="form-check-label" for="btn-cc-visitors-total">All Victorian tourism</label>
               </div>
               <script>$(document).ready(function() { $('[id^=cc]').hide(); $('#cc-visitors-victoria').show(); $('#select-creative-cultural-vic').on('change', function(){ var selected = $(this).find("input:radio:checked").val(); $('[id^=cc]').hide(); $('#' + selected) .show()});});</script>
             </div>
